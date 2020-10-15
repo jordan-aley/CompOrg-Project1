@@ -21,6 +21,13 @@
     check:
     beq $t0, 10, finish
 
+    #create jump points for upper and lowercase letters and numbers
+    sort:
+    addi $t0, $t0, 1
+    bge $s2, 97, lowerCase
+    bge $s2, 65, upperCase
+    bge $s2, 48, number
+
     #iterates through the input
     loop:
     addi $t3,$t3, 1
