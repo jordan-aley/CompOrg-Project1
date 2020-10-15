@@ -34,6 +34,13 @@
     lb $s2, ($t3)
     j check
 
+    #all eligable lowercase letters
+    lowerCase:
+    bge $s2, 119 iterator
+    sub $s2, $s2, 87
+    add $s3, $s3, $s2
+    j iterator
+
     #when input is 10 characters long finish
     finish:
     li $v0, 4
