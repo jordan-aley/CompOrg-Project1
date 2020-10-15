@@ -27,3 +27,8 @@
     lb $s2, ($t3)
     j check
 
+    #when input is 10 characters long finish
+    finish:
+    li $v0, 4
+    la $a0, newLine
+    syscall
