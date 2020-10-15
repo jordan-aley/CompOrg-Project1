@@ -21,3 +21,9 @@
     check:
     beq $t0, 10, finish
 
+    #iterates through the input
+    loop:
+    addi $t3,$t3, 1
+    lb $s2, ($t3)
+    j check
+
