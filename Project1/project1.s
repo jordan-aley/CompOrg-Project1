@@ -48,6 +48,13 @@
     add $s3, $s3, $s2
     j loop
 
+    #all numbers
+    number:
+    bge $s2, 58 iterator
+    sub $s2, $s2, 48
+    add $s3, $s3, $s2
+    j loop
+
     #when input is 10 characters long finish
     finish:
     li $v0, 4
