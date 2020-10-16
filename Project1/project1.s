@@ -36,21 +36,21 @@
 
     #all eligable lowercase letters
     lowerCase:
-    bge $s2, 119 iterator
+    bge $s2, 119 loop
     sub $s2, $s2, 87
     add $s3, $s3, $s2
     j loop
 
     #all eligable uppercase letters
     upperCase:
-    bge $s2, 87 iterator
+    bge $s2, 87 loop
     sub $s2, $s2, 55
     add $s3, $s3, $s2
     j loop
 
     #all numbers
     number:
-    bge $s2, 58 iterator
+    bge $s2, 58 loop
     sub $s2, $s2, 48
     add $s3, $s3, $s2
     j loop
@@ -60,3 +60,4 @@
     li $v0, 4
     la $a0, newLine
     syscall
+
