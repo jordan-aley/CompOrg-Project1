@@ -39,7 +39,14 @@
     bge $s2, 119 iterator
     sub $s2, $s2, 87
     add $s3, $s3, $s2
-    j iterator
+    j loop
+
+    #all eligable uppercase letters
+    upperCase:
+    bge $s2, 87 iterator
+    sub $s2, $s2, 55
+    add $s3, $s3, $s2
+    j loop
 
     #when input is 10 characters long finish
     finish:
